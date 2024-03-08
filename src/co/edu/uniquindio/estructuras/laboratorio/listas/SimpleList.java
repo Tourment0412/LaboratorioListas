@@ -146,7 +146,7 @@ public class SimpleList<E> implements Iterable<E> {
 
 		@Override
 		public boolean hasNext() {
-			return head.getNext() != null;
+			return head!= null;
 		}
 
 		@Override
