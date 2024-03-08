@@ -4,17 +4,21 @@ import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleList;
 import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleNode;
 
 public class Ejercicio01 {
-	
-	public static void main(String []args ) {
-		SimpleList<Integer> lista= new SimpleList<Integer>();
+
+	public static void main(String[] args) {
+		SimpleList<Integer> lista = new SimpleList<Integer>();
 		lista.addToTail(1);
 		lista.addToTail(2);
 		lista.addToTail(3);
-		SimpleList <Integer> listaResult= obtenerNumerosPosImpares(lista);
+		lista.addToTail(4);
+		SimpleList<Integer> listaResult = obtenerNumerosPosImpares(lista);
 		imprimirLista(listaResult);
 	}
+
 	/**
-	 * Se busca retornar los numeros que esten en una posicion impar de la lista simple
+	 * Se busca retornar los numeros que esten en una posicion impar de la lista
+	 * simple que se envia por parametro, se inicia el i
+	 * 
 	 * @param lista
 	 * @return
 	 */
@@ -22,7 +26,7 @@ public class Ejercicio01 {
 		SimpleList<Integer> listaRetorno = new SimpleList<Integer>();
 		SimpleNode<Integer> referencia = lista.head;
 		int cont = 0;
-		while (referencia!= null) {
+		while (referencia != null) {
 			if (cont % 2 != 0) {
 				listaRetorno.addToTail(referencia.getValue());
 
@@ -32,12 +36,12 @@ public class Ejercicio01 {
 		}
 		return listaRetorno;
 	}
-	
-	public static void imprimirLista(SimpleList<Integer>lista) {
-		SimpleNode<Integer> nodoRef= lista.head;
-		while(nodoRef!=null) {
+
+	public static void imprimirLista(SimpleList<Integer> lista) {
+		SimpleNode<Integer> nodoRef = lista.head;
+		while (nodoRef != null) {
 			System.out.println(nodoRef.getValue());
-			nodoRef= nodoRef.getNext();
+			nodoRef = nodoRef.getNext();
 		}
 	}
 
