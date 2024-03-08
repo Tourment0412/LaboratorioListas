@@ -4,7 +4,7 @@ import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleList;
 import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleNode;
 
 public class Ejercicio01 {
-
+	
 	public static void main(String []args ) {
 		SimpleList<Integer> lista= new SimpleList<Integer>();
 		lista.addToTail(1);
@@ -13,7 +13,11 @@ public class Ejercicio01 {
 		SimpleList <Integer> listaResult= obtenerNumerosPosImpares(lista);
 		imprimirLista(listaResult);
 	}
-
+	/**
+	 * Se busca retornar los numeros que esten en una posicion impar de la lista simple
+	 * @param lista
+	 * @return
+	 */
 	public static SimpleList<Integer> obtenerNumerosPosImpares(SimpleList<Integer> lista) {
 		SimpleList<Integer> listaRetorno = new SimpleList<Integer>();
 		SimpleNode<Integer> referencia = lista.head;

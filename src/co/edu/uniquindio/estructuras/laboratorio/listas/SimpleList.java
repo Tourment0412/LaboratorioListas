@@ -151,4 +151,65 @@ public class SimpleList<E> implements Iterable<E> {
 			return e;
 		}
 	}
+	public SimpleNode<E> obtenerValorNodo(int n) {
+		int i = 0;
+		SimpleNode<E> aux = head;
+		while (aux != null && i < n) {
+			aux = aux.getNext();
+			i++;
+		}
+		return aux;
+	}
+
+	public SimpleNode<E> obtenerNodo(SimpleNode<E> nodoBuscar) {
+		SimpleNode<E> aux = head;
+		while (aux != null) {
+			if (aux.equals(nodoBuscar))
+				return aux;
+			aux = aux.getNext();
+		}
+		return aux;
+	}
+
+	public int obtenerPosicionNodo(SimpleNode<E> nodoBuscar) {
+		int i = 0;
+		SimpleNode<E> aux = head;
+		while (aux != null) {
+			if (aux.equals(nodoBuscar))
+				return i;
+			i++;
+			aux = aux.getNext();
+		}
+		return -1;
+	}
+
+	public boolean estaVacia() {
+		return head == null;
+	}
+
+	public void eliminarPrimero() {
+		if (estaVacia())
+			return;
+		head = head.getNext();
+	}
+
+	public String imprimirLista() {
+		StringBuilder sb = new StringBuilder("[");
+		SimpleNode<E> aux = head;
+
+		while (aux != null) {
+			sb.append(aux.getValue());
+			sb.append(", ");
+			aux = aux.getNext();
+		}
+		sb.append("]");
+		return sb.toString();
+	}
+
+	public void borrarLista() {
+		head = null;
+	}
+	
+	
+	
 }
