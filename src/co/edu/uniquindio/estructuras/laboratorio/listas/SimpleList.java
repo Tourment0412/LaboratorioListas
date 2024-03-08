@@ -131,6 +131,11 @@ public class SimpleList<E> implements Iterable<E> {
 		return new Iterador(head);
 	}
 
+	@Override
+	public String toString() {
+		return String.format("[%s]", head);
+	}
+
 	private class Iterador implements Iterator<E> {
 
 		private SimpleNode<E> head;
@@ -150,6 +155,7 @@ public class SimpleList<E> implements Iterable<E> {
 			head = head.getNext();
 			return e;
 		}
+
 	}
 	public SimpleNode<E> obtenerValorNodo(int n) {
 		int i = 0;

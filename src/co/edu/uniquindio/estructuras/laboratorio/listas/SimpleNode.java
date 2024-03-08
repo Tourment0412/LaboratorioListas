@@ -1,13 +1,13 @@
 package co.edu.uniquindio.estructuras.laboratorio.listas;
 
-public class SimpleNode <E> {
-	
+public class SimpleNode<E> {
+
 	private E value;
-	private SimpleNode <E> next;
-	
+	private SimpleNode<E> next;
+
 	public SimpleNode(E valor) {
 		this.value = valor;
-		this.next=null;
+		this.next = null;
 	}
 
 	public E getValue() {
@@ -25,6 +25,10 @@ public class SimpleNode <E> {
 	public void setNext(SimpleNode<E> next) {
 		this.next = next;
 	}
-	
+
+	@Override
+	public String toString() {
+		return next != null ? String.format("%s, %s", value, next) : value.toString();
+	}
 
 }
