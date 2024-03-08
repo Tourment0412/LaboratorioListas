@@ -1,4 +1,4 @@
-package co.edu.uniquindio.estructuras.laboratorio;
+package co.edu.uniquindio.estructuras.laboratorio.listas;
 
 public class SimpleNode <E> {
 	
