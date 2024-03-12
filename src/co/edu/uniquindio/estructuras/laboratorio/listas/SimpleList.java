@@ -203,6 +203,24 @@ public class SimpleList<E> implements Iterable<E> {
 			return;
 		head = head.getNext();
 	}
+	
+	public void eliminarElemento(E elemento) {
+		if(estaVacia()) return;
+		
+		var aux = head;
+		var previous = head;
+		
+		while(aux.getNext() != null) {
+			previous = aux;
+			aux = aux.getNext();
+			if(aux.getValue().equals(elemento)) {
+				previous.setNext(aux.getNext());
+				return;
+			}
+		}
+		size--;
+		
+	}
 
 	/**
 	 * Method used to print a {@link SimpleList} using forwards movement
