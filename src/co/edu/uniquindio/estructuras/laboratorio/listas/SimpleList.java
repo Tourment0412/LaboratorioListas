@@ -1,6 +1,7 @@
 package co.edu.uniquindio.estructuras.laboratorio.listas;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class SimpleList<E> implements Iterable<E> {
 	public SimpleNode<E> head;
@@ -146,17 +147,21 @@ public class SimpleList<E> implements Iterable<E> {
 
 		@Override
 		public boolean hasNext() {
-			return head!= null;
+			return head != null;
 		}
 
 		@Override
 		public E next() {
+			if(!hasNext()) {
+				throw new NoSuchElementException("");
+			}
 			E e = head.getValue();
 			head = head.getNext();
 			return e;
 		}
 
 	}
+
 	public SimpleNode<E> obtenerValorNodo(int n) {
 		int i = 0;
 		SimpleNode<E> aux = head;
@@ -199,23 +204,30 @@ public class SimpleList<E> implements Iterable<E> {
 		head = head.getNext();
 	}
 
-	public String imprimirLista() {
+	/**
+	 * Method used to print a {@link SimpleList} using forwards movement
+	 * 
+	 * @return
+	 */
+	public void printListForwards() {
 		StringBuilder sb = new StringBuilder("[");
 		SimpleNode<E> aux = head;
 
 		while (aux != null) {
 			sb.append(aux.getValue());
-			sb.append(", ");
+			if (aux.getNext() == null) {
+				sb.append("]");
+			} else {
+				sb.append(", ");
+			}
 			aux = aux.getNext();
 		}
-		sb.append("]");
-		return sb.toString();
+
+		System.out.println(sb.toString());
 	}
 
 	public void borrarLista() {
 		head = null;
 	}
-	
-	
-	
+
 }

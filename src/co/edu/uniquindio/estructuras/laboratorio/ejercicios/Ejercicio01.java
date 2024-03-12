@@ -12,7 +12,7 @@ public class Ejercicio01 {
 		lista.addToTail(3);
 		lista.addToTail(4);
 		SimpleList<Integer> listaResult = obtenerNumerosPosImpares(lista);
-		imprimirLista(listaResult);
+		listaResult.printListForwards();
 	}
 
 	/**
