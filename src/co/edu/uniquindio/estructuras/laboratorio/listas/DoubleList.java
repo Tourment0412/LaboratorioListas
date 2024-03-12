@@ -76,7 +76,7 @@ public class DoubleList <E> implements Iterable<E>{
 		}
 		
 		public boolean hasPrevious() {
-			return tail!=null;
+			return 
 		}
 
 		@Override
