@@ -5,16 +5,6 @@ import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleNode;
 
 public class Ejercicio04 {
 
-	public static void main(String[] args) {
-		SimpleList<Integer> lista = new SimpleList<Integer>();
-		lista.addToTail(1);
-		lista.addToTail(2);
-		lista.addToTail(3);
-		lista.addToTail(4);
-		SimpleList<Integer> listaResult= obtenerValoresImpares(lista);
-		listaResult.printListForwards();
-
-	}
 	/**
 	 * Método que devuelva una lista enlazada con los valores impares de una lista de
 	 * números.

@@ -5,16 +5,6 @@ import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleNode;
 
 public class Ejercicio01 {
 
-	public static void main(String[] args) {
-		SimpleList<Integer> lista = new SimpleList<Integer>();
-		lista.addToTail(1);
-		lista.addToTail(2);
-		lista.addToTail(3);
-		lista.addToTail(4);
-		SimpleList<Integer> listaResult = obtenerNumerosPosImpares(lista);
-		listaResult.printListForwards();
-	}
-
 	/**
 	 * Se busca retornar los numeros que esten en una posicion impar de la lista
 	 * simple que se envia por parametro, se inicia el i

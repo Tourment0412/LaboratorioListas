@@ -6,20 +6,6 @@ import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleList;
 
 public class Ejercicio05 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		SimpleList<Integer> lista = new SimpleList<Integer>();
-		lista.addToTail(1);
-		lista.addToTail(2);
-		lista.addToTail(3);
-		lista.addToTail(4);
-		lista.addToTail(1);
-		lista.addToTail(2);
-		lista.addToTail(1);
-		System.out.println(obtenerCantRepetidadValorInt(lista, 1));
-
-	}
-
 	/**
 	 * método que retorne la cantidad de veces que se repite un valor en una lista
 	 * enlazada. Usando cualquier tipo de dato
