@@ -1,11 +1,13 @@
 package co.edu.uniquindio.estructuras.laboratorio.listas;
 
+import java.util.Random;
+
 public class CircularLinkedList <E>{
 	
 	private SimpleNode<E> head;
 
-	public CircularLinkedList(SimpleNode<E> head) {
-		this.head = head;
+	public CircularLinkedList() {
+		this.head = null;
 	}
 	
 	
@@ -26,19 +28,39 @@ public class CircularLinkedList <E>{
 		}
 	}
 	
-	public E searchValue(E value) {
+	/**
+	 * This method is usend to search a {@value} inside the {@link CircularLinkedList}
+	 * if the value exists in the {@link CircularLinkedList} it returns 1, if value doesn't exists return -1
+	 * @param value
+	 * @return
+	 */
+	
+	public int searchValue(E value) {
+		Random random = new Random();
 		if (head==null) {
-			return null;
+			return -1;
 		}else {
 			SimpleNode<E> current= head;
 			do {
 				if(current.getValue().equals(value)) {
-					return current.getValue();
+					return 1;
 				}
 				current= current.getNext();
-			}while(current.getNext()!=head);
-			return null;
+			}while(current!=head);
+			return -1;
 		}
+	}
+	
+	public void printCircularList() {
+		if(head==null) {
+			System.out.println("Lista vacia");
+			return;
+		}
+		SimpleNode<E> current=head;
+		do {
+			System.out.println(current.getValue());
+			current=current.getNext();
+		}while(current!=head);
 	}
 	
 	
