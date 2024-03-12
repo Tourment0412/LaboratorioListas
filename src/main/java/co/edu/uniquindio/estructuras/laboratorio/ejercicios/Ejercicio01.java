@@ -3,6 +3,13 @@ package co.edu.uniquindio.estructuras.laboratorio.ejercicios;
 import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleList;
 import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleNode;
 
+/**
+ * Obtener los números de las posiciones impares de una lista enlazada simple de
+ * números<br>
+ * <br>
+ * La solución de este ejercicio se encuentra en
+ * {@link #obtenerNumerosPosImpares(SimpleList)}
+ */
 public class Ejercicio01 {
 
 	/**
@@ -25,14 +32,6 @@ public class Ejercicio01 {
 			cont++;
 		}
 		return listaRetorno;
-	}
-
-	public static void imprimirLista(SimpleList<Integer> lista) {
-		SimpleNode<Integer> nodoRef = lista.head;
-		while (nodoRef != null) {
-			System.out.println(nodoRef.getValue());
-			nodoRef = nodoRef.getNext();
-		}
 	}
 
 }

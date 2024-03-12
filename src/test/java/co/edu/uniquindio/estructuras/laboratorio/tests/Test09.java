@@ -7,7 +7,7 @@ import co.edu.uniquindio.estructuras.laboratorio.listas.CircularLinkedList;
 public class Test09 {
 
 	@Test
-	public void test() {
+	public void test09() {
 
 		CircularLinkedList<Integer> lista = new CircularLinkedList<Integer>();
 		lista.addNode(1);

@@ -4,11 +4,17 @@ import java.util.Iterator;
 
 import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleList;
 
+/**
+ * Eliminar los números pares de una lista enlazada simple <br>
+ * <br>
+ * La solución de este ejercicio se encuentra en
+ * {@link #eliminarNumerosPares(SimpleList)}
+ */
 public class Ejercicio03 {
 
 	/**
 	 * 
-	 * Eliminar los números pares de una lista enlazada simple
+	 * Elimina los números pares de una lista enlazada simple
 	 * 
 	 * @param lista
 	 */

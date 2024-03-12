@@ -3,37 +3,25 @@ package co.edu.uniquindio.estructuras.laboratorio.ejercicios;
 import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleList;
 import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleNode;
 
+/**
+ * Escribir un método que permita “concatenar” dos listas enlazadas simples, el
+ * método debe recibir como parámetro dos objetos de tipo Lista, unirlas y
+ * retornar una lista que contenga a ambas. <br>
+ * <br>
+ * La solución de este ejercicio se encuentra en
+ * {@link #concatenarLista(SimpleList, SimpleList)}
+ */
 public class Ejercicio10 {
 	/**
-	 * Escribir un método que permita “concatenar” dos listas enlazadas simples, el
-	 * método debe recibir como parámetro dos objetos de tipo Lista, unirlas y
-	 * retornar una lista que contenga a ambas.
+	 * Concatena dos listas enlazadas simples, se retorna la lista inicial
+	 * agregandole la final. Si la inicial está vacía, se retorna la final; y si la
+	 * final está vacía se retorna la inicial
 	 * 
-	 * El metodo se realizara en esta clase para poder pasar los dos objetos de tipo lista por parametro
-	 * (Si fuera en la clase SimpleList, podriamos pasar solo la que se desea concatenar y usar el this
-	 * 
-	 * Se desea enviar una lista inicial y la que se va a concatenar luego de esta
+	 * @param <E>          es el tipo del elemento de la lista
+	 * @param listaInicial es la lista inicial
+	 * @param listaFinal   es la lista final
+	 * @return es la lista que queda al juntar la inicial con la final
 	 */
-	
-	public static void main(String [] args) {
-		
-		SimpleList<Integer> listaInicial= new SimpleList<Integer>();
-		listaInicial.addToTail(1);
-		listaInicial.addToTail(2);
-		listaInicial.addToTail(3);
-		listaInicial.printListForwards();
-		SimpleList<Integer> listaFinal= new SimpleList<Integer>();
-		listaFinal.addToTail(4);
-		listaFinal.addToTail(5);
-		listaFinal.addToTail(6);
-		listaFinal.printListForwards();
-		
-		SimpleList<Integer> listaResult = new SimpleList<Integer>();
-		listaResult= concatenarLista(listaInicial, listaFinal);
-		listaResult.printListForwards();
-	}
-	
-	
 	public static <E> SimpleList<E> concatenarLista(SimpleList<E>listaInicial, SimpleList<E>listaFinal){
 		if(listaInicial.head==null) {
 			return listaFinal;

@@ -8,7 +8,7 @@ import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleList;
 public class Test01 {
 
 	@Test
-	public void prueba01() {
+	public void test01() {
 		SimpleList<Integer> lista = new SimpleList<Integer>();
 		lista.addToTail(1);
 		lista.addToTail(2);
