@@ -1,6 +1,7 @@
 package co.edu.uniquindio.estructuras.laboratorio.listas;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class DoubleList <E> implements Iterable<E>{
 	
@@ -76,18 +77,26 @@ public class DoubleList <E> implements Iterable<E>{
 		}
 		
 		public boolean hasPrevious() {
-			return 
+			return head!=null;
 		}
 
 		@Override
 		public E next() {
+			if(!hasNext()) {
+				throw new NoSuchElementException();
+			}
 			E e = head.getValue();
 			head= head.getNext();
 			return e;
 		}
 		
 		public E previous() {
-			E e= tail.
+			if(!hasPrevious()) {
+				throw new NoSuchElementException();
+			}
+			E e= head.getValue();
+			head= head.getPrevious();
+			return e;
 		}
 		
 	}
