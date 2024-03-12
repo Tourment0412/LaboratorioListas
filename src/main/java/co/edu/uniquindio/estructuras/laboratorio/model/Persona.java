@@ -21,4 +21,10 @@ public class Persona {
 		}
 		return sb.toString();
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Persona [cedula=%s]", cedula);
+	}
+
 }
