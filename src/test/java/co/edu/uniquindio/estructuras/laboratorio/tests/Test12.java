@@ -13,7 +13,7 @@ public class Test12 {
 		SimpleList<Double> listaDobles = Ejercicio12.leerRealesArchivo("src/main/resources/reales.txt");
 		listaDobles.printListForwards();
 		System.out.println("La media arirmetica es: " + Ejercicio12.calcularMedia(listaDobles));
-		System.out.println("La desviacion estandar es: " + Ejercicio12.calcularVarianza(listaDobles));
+		System.out.println("La desviacion estandar es: " + Ejercicio12.calcularDesviacionEstandas(listaDobles));
 	}
 
 

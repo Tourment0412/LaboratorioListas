@@ -46,7 +46,7 @@ public class Ejercicio12 {
 		return (suma) / cant;
 	}
 
-	public static double calcularVarianza(SimpleList<Double> listaReales) {
+	public static double calcularDesviacionEstandas(SimpleList<Double> listaReales) {
 		double sumaDesviacion = 0.0;
 		int cant = 0;
 		double media = calcularMedia(listaReales);
