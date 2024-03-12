@@ -1,6 +1,7 @@
 package co.edu.uniquindio.estructuras.laboratorio.ejercicios;
 
 import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleList;
+import co.edu.uniquindio.estructuras.laboratorio.model.Persona;
 
 public class Ejercicio02 {
 	/**
@@ -9,17 +10,12 @@ public class Ejercicio02 {
 	 * 
 	 * @param listaPersonas
 	 */
-	public static <T> void obtenerPersonasNumerosImpares(SimpleList<T> lista) {
-		for (T eachPersona : lista) {
-			System.out.println(eachPersona.toString());
+	public static SimpleList<Persona> obtenerPersonasNumerosImpares(SimpleList<Persona> lista) {
+		SimpleList<Persona> listaNueva = new SimpleList<>();
+		for (Persona eachPersona : lista) {
+			if (eachPersona.getNumsCedula().length() % 2 == 0)
+				listaNueva.addToTail(eachPersona);
 		}
-	}
-
-	public static void main(String[] args) {
-		SimpleList<Integer> listaPersonas = new SimpleList<>();
-		for (int i = 0; i < 5; i++) {
-			listaPersonas.addToTail(i);
-		}
-		obtenerPersonasNumerosImpares(listaPersonas);
+		return listaNueva;
 	}
 }
