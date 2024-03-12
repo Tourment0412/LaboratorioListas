@@ -3,22 +3,18 @@ package co.edu.uniquindio.estructuras.laboratorio.tests;
 import org.junit.Test;
 
 import co.edu.uniquindio.estructuras.laboratorio.ejercicios.Ejercicio03;
+import co.edu.uniquindio.estructuras.laboratorio.ejercicios.Ejercicio12;
 import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleList;
 
 public class Test12 {
 
 	@Test
 	public void test() {
-		var lista = new SimpleList<Integer>();
-		lista.addToTail(1);
-		lista.addToTail(2);
-		lista.addToTail(3);
-		lista.addToTail(4);
-		lista.addToTail(5);
-
-		System.out.println(lista.toString());
-		Ejercicio03.eliminarNumerosPares(lista);
-		System.out.println(lista.toString());
+		SimpleList<Double> listaDobles = Ejercicio12.leerRealesArchivo("src/main/resources/reales.txt");
+		listaDobles.printListForwards();
+		System.out.println("La media arirmetica es: " + Ejercicio12.calcularMedia(listaDobles));
+		System.out.println("La desviacion estandar es: " + Ejercicio12.calcularVarianza(listaDobles));
 	}
+
 
 }
