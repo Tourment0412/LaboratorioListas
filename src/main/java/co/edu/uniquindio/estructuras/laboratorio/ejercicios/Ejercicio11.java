@@ -28,7 +28,7 @@ public class Ejercicio11 {
 	 *         evaluación de los numeros
 	 */
 	public static Map<Double, Double> obtenerTablaValores(SimpleList<TerminoPolinomio> polinomio, double inicial,
-			int cantidad, int salto) {
+			int cantidad, double salto) {
 		HashMap<Double, Double> mapa = new HashMap<Double, Double>();
 		for (int i = 0; i < cantidad; i++, inicial += salto) {
 			mapa.put(inicial, evaluarFuncion(polinomio, inicial));
@@ -38,9 +38,11 @@ public class Ejercicio11 {
 
 	/**
 	 * 
-	 * Evalua un valor x en un polinomio almacenado en una lista de {@link TerminoPolinomio}, 
+	 * Evalua un valor x en un polinomio almacenado en una lista de
+	 * {@link TerminoPolinomio}
+	 * 
 	 * @param polinomio es el polinomio en el que se evalúa el valor
-	 * @param x es el número a evaluar
+	 * @param x         es el número a evaluar
 	 * @return la evaluación de x en el polinomio
 	 */
 	private static double evaluarFuncion(SimpleList<TerminoPolinomio> polinomio, double x) {
