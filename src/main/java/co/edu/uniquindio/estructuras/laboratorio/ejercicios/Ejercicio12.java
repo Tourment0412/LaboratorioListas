@@ -8,11 +8,18 @@ import java.util.Scanner;
 import co.edu.uniquindio.estructuras.laboratorio.listas.SimpleList;
 
 /**
- * Escriba un programa que calcule la media y la desviación estándar (Opcion de muestra) de un
- * conjunto de N números reales. Tenga en cuenta que:<br>
- * <li>Implementar una lista enlazada propia <li>Debe leer los n números reales de
- * un archivo <li>Debe almacenar los N números reales en una lista enlazada para
- * realizar los cálculos.
+ * Escriba un programa que calcule la media y la desviación estándar (Opcion de
+ * muestra) de un conjunto de N números reales. Tenga en cuenta que:<br>
+ * <li>Implementar una lista enlazada propia
+ * <li>Debe leer los n números reales de un archivo
+ * <li>Debe almacenar los N números reales en una lista enlazada para realizar
+ * los cálculos.<br>
+ * <br>
+ * La solución de este ejercicio se encuentra en
+ * {@link #calcularMedia(SimpleList)} y
+ * {@link #calcularDesviacionEstandar(SimpleList)} y el ejemplo con la lectura
+ * de archivos esta en los tests y se usa el metodo
+ * {@link #leerRealesArchivo(String)}
  */
 public class Ejercicio12 {
 
@@ -26,10 +33,9 @@ public class Ejercicio12 {
 				double numero = Double.parseDouble(sc.nextLine());
 				lista.addToTail(numero);
 			}
+			sc.close();
 			return lista;
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			SimpleList<Double> listaCatch = new SimpleList<Double>();
 			return listaCatch;
 		}
@@ -46,7 +52,7 @@ public class Ejercicio12 {
 		return (suma) / cant;
 	}
 
-	public static double calcularDesviacionEstandas(SimpleList<Double> listaReales) {
+	public static double calcularDesviacionEstandar(SimpleList<Double> listaReales) {
 		double sumaDesviacion = 0.0;
 		int cant = 0;
 		double media = calcularMedia(listaReales);

@@ -1,5 +1,8 @@
 package co.edu.uniquindio.estructuras.laboratorio.listas;
 
+/**
+ * 
+ */
 public class Lista {
 
 	private NodoLista inicio;
@@ -8,13 +11,24 @@ public class Lista {
 		inicio = null;
 	}
 
-	public int obtenerMaxDistancia(int valor) {
-		return obtenerMaxDistancia(valor, null, inicio, 0);
+	public NodoLista getInicio() {
+		return inicio;
 	}
 
-	private int obtenerMaxDistancia(int valor, Object object, NodoLista inicio2, int i) {
-		return 0;
+	public void agregar(int valor) {
+		if (inicio == null) {
+			inicio = new NodoLista(valor, null);
+			return;
+		}
+		NodoLista nodo = inicio;
+		while (nodo.getSig() != null)
+			nodo = nodo.getSig();
+
+		nodo.setSig(new NodoLista(valor, null));
 	}
 
-	
+	@Override
+	public String toString() {
+		return inicio == null ? "[]" : "[" + inicio + "]";
+	}
 }

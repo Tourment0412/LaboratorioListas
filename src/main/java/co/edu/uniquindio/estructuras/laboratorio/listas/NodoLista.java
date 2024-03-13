@@ -3,17 +3,45 @@ package co.edu.uniquindio.estructuras.laboratorio.listas;
 import java.util.Objects;
 
 public class NodoLista {
-	int dato;
-	NodoLista sig;
+	private int dato;
+	private NodoLista sig;
 
 	public NodoLista(int dato, NodoLista nodoLista) {
+		this.setDato(dato);
+		this.setSig(nodoLista);
+	}
+
+	/**
+	 * @return the dato
+	 */
+	public int getDato() {
+		return dato;
+	}
+
+	/**
+	 * @param dato the dato to set
+	 */
+	public void setDato(int dato) {
 		this.dato = dato;
-		this.sig = nodoLista;
+	}
+
+	/**
+	 * @return the sig
+	 */
+	public NodoLista getSig() {
+		return sig;
+	}
+
+	/**
+	 * @param sig the sig to set
+	 */
+	public void setSig(NodoLista sig) {
+		this.sig = sig;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(dato);
+		return Objects.hash(getDato());
 	}
 
 	@Override
@@ -25,8 +53,12 @@ public class NodoLista {
 		if (getClass() != obj.getClass())
 			return false;
 		NodoLista other = (NodoLista) obj;
-		return dato == other.dato;
+		return getDato() == other.getDato();
 	}
 
-	
+	@Override
+	public String toString() {
+		return sig != null ? String.format("%d, %s", dato, sig) : dato + "";
+	}
+
 }
