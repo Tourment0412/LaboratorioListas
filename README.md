@@ -2,7 +2,7 @@
 
 Taller realizado por: [Juan Manuel Amador](https://github.com/Amador02 "Amador02"), [Santiago Quintero](https://github.com/Tourment0412 "Tourment0412") y [Breyner Alejandro Sánchez](https://github.com/breyner-sq "breyner-sq")
 
-El taller se puede ver [aquí](info/Laboratorio%20listas%20enlazadas-2023-2.pdf) o mas abajo en el docuemnto.
+El taller se puede ver [aquí](info/Laboratorio%20listas%20enlazadas-2023-2.pdf) o mas abajo en el documento.
 
 # Taller
 
