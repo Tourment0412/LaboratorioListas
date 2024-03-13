@@ -1,7 +1,5 @@
 package co.edu.uniquindio.estructuras.laboratorio.listas;
 
-import java.util.Random;
-
 public class CircularLinkedList <E>{
 	
 	private SimpleNode<E> head;
@@ -36,7 +34,6 @@ public class CircularLinkedList <E>{
 	 */
 	
 	public int searchValue(E value) {
-		Random random = new Random();
 		if (head==null) {
 			return -1;
 		}else {
