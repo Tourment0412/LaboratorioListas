@@ -57,7 +57,7 @@ public class DoubleList<E> implements Iterable<E> {
 	}
 
 	@Override
-	public Iterator<E> iterator() {
+	public DoubleListIterator iterator() {
 		return new DoubleListIterator(head);
 	}
 

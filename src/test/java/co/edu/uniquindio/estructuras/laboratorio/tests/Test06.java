@@ -1,5 +1,7 @@
 package co.edu.uniquindio.estructuras.laboratorio.tests;
 
+import java.util.ArrayList;
+
 import org.junit.Test;
 
 import co.edu.uniquindio.estructuras.laboratorio.listas.DoubleList;
